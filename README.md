@@ -35,12 +35,11 @@ import (
 )
 
 func main() {
-	// Configuration personnalisée : DEBUG activé, format JSON, nom du service
+	// Configuration personnalisée : DEBUG activé ou non , format JSON, nom du service
 	cfg := logger.Config{
 		EnableJSON:  true,
-		LogLevel:    slog.LevelDebug,
+		Debug: false,
 		ServiceName: "mon-api-gateway",
-		AddSource:   false,
 	}
 
 	logger.Init(cfg)
