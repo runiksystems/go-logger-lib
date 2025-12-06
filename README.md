@@ -17,18 +17,21 @@ Niveau de Log Dynamique : Supporte Debug, Info, Warn, et Error.
 
 Ajoutez le module à votre projet Go (remplacez VotreUtilisateur par votre nom d'utilisateur GitHub) :
 
-go get [github.com/runiksystems/go-logger-lib@latest](https://github.com/runiksystems/go-logger-lib@latest)
+```bash
+go get github.com/runiksystems/go-logger-lib@v1.0.0
+```
 
 
 ### 2. Initialisation et Configuration
 
 Appelez logger.Init() au début de votre fonction main :
 
+```go
 package main
 
 import (
 	"log/slog"
-	"[github.com/runiksystems/go-logger-lib/logger](https://github.com/n-dupuis-it9/runiksystems/logger)"
+	"github.com/runiksystems/go-logger-lib"
 )
 
 func main() {
@@ -46,7 +49,7 @@ func main() {
 	slog.Info("Démarrage de l'application", "port", 8080)
 	slog.Debug("Tentative de connexion à la base de données...")
 }
-
+```
 
 ## Licence
 
